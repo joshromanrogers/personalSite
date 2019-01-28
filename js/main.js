@@ -4,7 +4,7 @@ const cursorWidth = cursor.getBoundingClientRect().width;
 const cursorHeight = cursor.getBoundingClientRect().height;
 const links = document.querySelectorAll("a, button");
 
-
+let isScrolling = false;
 let isMoving = false; /* throttle */
 let xPos = 0;
 let yPos = 0;
@@ -12,6 +12,7 @@ let activeCursor = false;
 let currentTarget = null;
 
 const init = () => {
+    window.addEventListener('scroll', handleScroll, false);
     window.addEventListener('mousemove', handleMouseMove);
   
     /* Active on hover */
@@ -50,6 +51,7 @@ const handleMouseMove = e => {
   };
   
   /* Active cursor */
+  
   const handleActiveCursor = e => {
     activeCursor = true;
     currentTarget = e.currentTarget;
@@ -70,6 +72,20 @@ const handleMouseMove = e => {
       cursor.classList.remove('is-active');
   
     }
+  };
+
+  /* on scroll, keep the cursor in the correct place */
+
+  const handleScroll = () => {
+    if (!isScrolling) {
+      requestAnimationFrame(updateScroll);
+    }
+    isScrolling = true;
+  };
+  
+  const updateScroll = () => {
+    isScrolling = false;
+  
   };
   
   init();
