@@ -14,6 +14,8 @@ let currentTarget = null;
 const buttonInit = () => {
     window.addEventListener('scroll', handleScroll, false);
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('load', buttonAppear);
+
 
     /* Active on hover */
     for (let i = 0; i < links.length; i++) {
