@@ -11,7 +11,7 @@ let yPos = 0;
 let activeCursor = false;
 let currentTarget = null;
 
-const init = () => {
+const buttonInit = () => {
     window.addEventListener('scroll', handleScroll, false);
     window.addEventListener('mousemove', handleMouseMove);
 
@@ -89,4 +89,4 @@ const updateScroll = () => {
 
 };
 
-init();
+buttonInit();
