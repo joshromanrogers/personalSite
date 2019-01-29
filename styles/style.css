@@ -454,3 +454,33 @@ h1 {
     color: black;
     font-size: 50px;
 }
+
+/*
+ * project css
+ */
+
+ .fade-out {
+    animation: fadeO 2s;
+ }
+
+ @keyframes fadeO {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+ }
+
+ .fade-in {
+    animation: fadeI 2s;
+ }
+
+ @keyframes fadeI {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+ }
