@@ -1,14 +1,13 @@
-/* first screen to home screen animation */
-
-/*
-when the button is clicked:
-1. headings move up and fade out
-2. first screen moves up and fades out
-3. same occurs with overlay
-4. same occurs with overlay-2
-5. homepage fades in
-6.
-*/
+// first screen to home screen animation 
+//
+// when the button is clicked:
+// 1. headings move up and fade out
+// 2. first screen moves up and fades out
+// 3. same occurs with overlay
+// 4. same occurs with overlay-2
+// 5. homepage fades in
+// 6.
+// 
 
 function fadeOut() {
 
