@@ -1,0 +1,19 @@
+{
+  "name": "personalsite",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshromanrogers/personalSite.git"
+  },
+  "author": "Roman Rogers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshromanrogers/personalSite/issues"
+  },
+  "homepage": "https://github.com/joshromanrogers/personalSite#readme"
+}
