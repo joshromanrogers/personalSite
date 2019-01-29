@@ -4,7 +4,6 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #101010;
 }
 
 html,
@@ -201,4 +200,67 @@ h1 {
         font-size: 20px;
         padding: 0.4em;
     }
+}
+
+/* initial page */
+
+.screen {
+    color: #323232;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #101010;
+}
+
+.overlay p {
+    font-size: 300px;
+    font-weight: 800;
+}
+
+/* momentary middle overlay */
+
+.overlay-2 {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #48A9A6;
+}
+
+/* homepage */
+
+.content {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: white;
+    overflow: hidden;
+}
+
+.content h1 {
+    font-family: Poppins;
+    font-size: 34px;
+    color: #101010;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.content p {
+    margin-top: 0;
+    text-align: left;
+    color: white;
+    font-weight: 400;
 }
