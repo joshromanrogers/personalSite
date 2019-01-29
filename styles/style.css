@@ -421,3 +421,36 @@ h1 {
 #next:after {
     content: "↓"
 }
+
+/*
+ * project css
+ */
+
+.container {
+    transition: transform 0.25s;
+    will-change: transform;
+    width: 100%;
+}
+
+.container img {
+    margin: 20%;
+    width: 60%;
+
+}
+
+.projectMain {
+    text-align: center;
+}
+
+.projectMain img {
+    width: 50%;
+    margin: 10%;
+}
+
+.projectHeader {
+    margin-left: 30%;
+    margin-top: 25%;
+
+    color: black;
+    font-size: 50px;
+}
