@@ -16,5 +16,7 @@
     "url": "https://github.com/joshromanrogers/personalSite/issues"
   },
   "homepage": "https://github.com/joshromanrogers/personalSite#readme",
-  "dependencies": {}
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
 }

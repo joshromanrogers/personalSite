@@ -18,86 +18,94 @@
         <div class="c-cursor__inner"></div>
     </div>
 
-    <!-- intro name, title and button -->
-    <div class="overlay">
-        <p class="screen">
-            <h1 class="rev-block">
-                <span>roman rogers</span>
-            </h1>
-            <h1 class="rev-block" id="onemore">
-                <span>creative developer</span>
-            </h1>
-        </p>
-        <!-- button that fires fadeOut into homepage -->
-        <div class="intro">
-            <button class="myBtn" onclick="fadeOut()">EXPLORE</button>
-        </div>
-    </div>
+    <!-- barba.js container (for page transitions) -->
+    <div id="barba-wrapper">
+        <div class="barba-container">
 
-    <!-- colour overlay -->
-    <div class="overlay-2"></div>
+            <!-- intro name, title and button -->
+            <div class="overlay">
+                <p class="screen">
+                    <h1 class="rev-block">
+                        <span>roman rogers</span>
+                    </h1>
+                    <h1 class="rev-block" id="onemore">
+                        <span>creative developer</span>
+                    </h1>
+                </p>
+                <!-- button that fires fadeOut into homepage -->
+                <div class="intro">
+                    <button class="myBtn" onclick="fadeOut()">EXPLORE</button>
+                </div>
+            </div>
 
-    <!-- homepage -->
-    <div class="content">
-        <!-- slider container -->
-        <div class="slider-body">
-            <!-- first slider (initially active) -->
-            <div class="slide active">
-                <div class="card">
-                    <div class="card-img" id="img01"></div>
-                    <div class="card-content">
-                        <p class="card-theme">Theme</p>
-                        <h2 class="card-header">Header</h2>
-                        <p class="card-para">Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit. Corrupti repellendus vel neque iure aut,
-                            eligendi aliquid vero facilis, quia repellat.</p>
-                        <a class="card-link" class="transition-link" href="html/project.html">Read</a>
-                        <button id="proj">click</button>
+            <!-- colour overlay -->
+            <div class="overlay-2"></div>
+
+            <!-- homepage -->
+            <div class="content">
+                <!-- slider container -->
+                <div class="slider-body">
+                    <!-- first slider (initially active) -->
+                    <div class="slide active">
+                        <div class="card">
+                            <div class="card-img" id="img01"></div>
+                            <div class="card-content">
+                                <p class="card-theme">Theme</p>
+                                <h2 class="card-header">Header</h2>
+                                <p class="card-para">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Corrupti repellendus vel neque iure aut,
+                                    eligendi aliquid vero facilis, quia repellat.</p>
+                                <a class="card-link" class="transition-link" href="html/project.html">Read</a>
+                                <button id="proj">click</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- second slider -->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="card-img" id="img02"></div>
+                            <div class="card-content">
+                                <p class="card-theme">Theme2</p>
+                                <h2 class="card-header">Header2</h2>
+                                <p class="card-para">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Corrupti repellendus vel neque iure aut,
+                                    eligendi aliquid vero facilis, quia repellat.</p>
+                                <a class="card-link">Read</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- third slider -->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="card-img" id="img03"></div>
+                            <div class="card-content">
+                                <p class="card-theme">Theme3</p>
+                                <h2 class="card-header">Header3</h2>
+                                <p class="card-para">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Corrupti repellendus vel neque iure aut,
+                                    eligendi aliquid vero facilis, quia repellat.</p>
+                                <a class="card-link">Read</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- slider buttons -->
+                    <div class="prevnext">
+                        <button class="pn-btn" id="prev"></button>
+                        <button class="pn-btn" id="next"></button>
                     </div>
                 </div>
-            </div>
-            <!-- second slider -->
-            <div class="slide">
-                <div class="card">
-                    <div class="card-img" id="img02"></div>
-                    <div class="card-content">
-                        <p class="card-theme">Theme2</p>
-                        <h2 class="card-header">Header2</h2>
-                        <p class="card-para">Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit. Corrupti repellendus vel neque iure aut,
-                            eligendi aliquid vero facilis, quia repellat.</p>
-                        <a class="card-link">Read</a>
-                    </div>
-                </div>
-            </div>
-            <!-- third slider -->
-            <div class="slide">
-                <div class="card">
-                    <div class="card-img" id="img03"></div>
-                    <div class="card-content">
-                        <p class="card-theme">Theme3</p>
-                        <h2 class="card-header">Header3</h2>
-                        <p class="card-para">Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit. Corrupti repellendus vel neque iure aut,
-                            eligendi aliquid vero facilis, quia repellat.</p>
-                        <a class="card-link">Read</a>
-                    </div>
-                </div>
-            </div>
-            <!-- slider buttons -->
-            <div class="prevnext">
-                <button class="pn-btn" id="prev"></button>
-                <button class="pn-btn" id="next"></button>
             </div>
         </div>
     </div>
 
     <!-- scripts -->
-    <script src="js/main.js"></script>
     <script src="js/button.js"></script>
     <script src="js/cursor.js"></script>
     <script src="js/fadeOut.js"></script>
     <script src="js/slider.js"></script>
+    <script src="scripts/barba.min.js" type="text/javascript"></script>
+    <script src="js/main.js"></script>
+
 
 
 </body>
