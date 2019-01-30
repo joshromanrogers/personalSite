@@ -33,6 +33,7 @@ const placeImage = (x, y) => {
 document.addEventListener('click', (event) => {
     event.preventDefault();
     placeImage(event.pageX, event.pageY);
+    console.log('click');
 })
 
 // same as above, but for mobile
