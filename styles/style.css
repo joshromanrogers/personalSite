@@ -456,31 +456,57 @@ h1 {
 }
 
 /*
- * project css
+ * page transition fades
  */
 
- .fade-out {
+.fade-out {
     animation: fadeO 2s;
- }
+}
 
- @keyframes fadeO {
+@keyframes fadeO {
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
- }
+}
 
- .fade-in {
+.fade-in {
     animation: fadeI 2s;
- }
+}
 
- @keyframes fadeI {
+@keyframes fadeI {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
- }
+}
+
+/*
+ * collage
+ */
+
+.collage-body {
+    background-color: #1a1919;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.collage-header {
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    z-index: 1;
+    /* stay visible above images */
+}
+
+.collage-img {
+    position: absolute;
+    animation: fadeI 0.5s;
+}
