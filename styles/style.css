@@ -511,3 +511,228 @@ h1 {
     position: absolute;
     animation: fadeI 0.5s;
 }
+
+/*
+ * navigation
+ */
+
+/* .menu {
+    height: 100vh;
+} */
+
+ .navigation-overlay:before {
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: 0.48;
+    position: fixed;
+    top: -110%;
+    width: 300%;
+}
+
+.menu-btn {
+    position: fixed;
+    margin: 1.2em;
+    right: 0;
+    z-index: 10;
+}
+
+.navigation-button {
+    border: none;
+    background: none;
+}
+
+.navigation-button:focus {
+    outline: none !important;
+}
+
+i {
+    outline: none;
+}
+
+.row,
+.col-lg {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.col-lg {
+    height: 100vh;
+}
+
+.col-lg.navigation-overlay {
+    background: #000;
+    position: absolute;
+    top: -100%;
+    width: 100%;
+}
+
+.col-lg.navigation-overlay:after {
+    z-index: 1;
+}
+
+ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    font-family: Poppins;
+    display: inline-block;
+    color: white;
+}
+
+li:not(:last-child) {
+    margin-right: 120px;
+}
+
+li:first-child:hover::before {
+    content: "";
+    z-index: -1;
+    width: 300px;
+    height: 400px;
+    display: block;
+    position: absolute;
+    top: -180px;
+    left: -30px;
+    background: url(hover_one.jpg);
+    transition: 1s;
+    animation: fade-in 2s ease-in-out;
+}
+
+li:nth-child(2):hover::before {
+    content: "";
+    z-index: -1;
+    width: 300px;
+    height: 400px;
+    display: block;
+    position: absolute;
+    top: -180px;
+    left: -30px;
+    background: url(hover_two.jpg);
+    transition: 1s;
+    animation: fade-in 2s ease-in-out;
+}
+
+li:nth-child(3):hover::before {
+    content: "";
+    z-index: -1;
+    width: 300px;
+    height: 400px;
+    display: block;
+    position: absolute;
+    top: -180px;
+    left: -30px;
+    background: url(hover_three.jpg);
+    transition: 1s;
+    animation: nav-fade-in 2s ease-in-out;
+}
+
+li:nth-child(4):hover::before {
+    content: "";
+    z-index: -1;
+    width: 300px;
+    height: 400px;
+    display: block;
+    position: absolute;
+    top: -180px;
+    left: -30px;
+    background: url(hover_four.jpg);
+    transition: 1s;
+    animation: fade-in 2s ease-in-out;
+}
+
+@keyframes nav-fade-in {
+    0% {
+        opacity: 0;
+        top: -160px;
+    }
+
+    50% {
+        opacity: 1;
+        top: -180px;
+    }
+
+    100% {
+        opacity: 1;
+        top: -180px;
+    }
+}
+
+@media(max-width: 900px) {
+    li {
+        text-align: center;
+        display: block !important;
+        margin: 0 !important;
+        padding: 20px 0;
+    }
+
+    li:hover::before {
+        width: 0 !important;
+    }
+}
+
+.vis {
+    z-index: 3;
+}
+
+/* menu burger */
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 1000ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+    transform: rotate(180deg);
+}
+
+.line {
+    fill: none;
+    transition: stroke-dasharray 300ms, stroke-dashoffset 300ms;
+    stroke: rgb(129, 12, 12);
+    stroke-width: 5.5;
+    stroke-linecap: round;
+}
+
+.ham .top {
+    stroke-dasharray: 40 160;
+}
+
+.ham .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 300ms;
+}
+
+.ham .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 300ms, stroke-dashoffset 300ms;
+}
+
+.ham.active .top {
+    stroke-dashoffset: -64px;
+}
+
+.ham.active .middle {
+    transform: rotate(90deg);
+}
+
+.ham.active .bottom {
+    stroke-dashoffset: -64px;
+}
