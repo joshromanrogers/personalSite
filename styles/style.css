@@ -562,9 +562,10 @@ i {
 
 .col-lg.navigation-overlay {
     background: #000;
-    position: absolute;
+    position: fixed;
     top: -100%;
     width: 100%;
+    overflow: hidden;
 }
 
 .col-lg.navigation-overlay:after {
