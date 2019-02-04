@@ -682,6 +682,12 @@ li:nth-child(4):hover::before {
     z-index: 3;
 }
 
+/* added to body when menu is open, to stop scrolling underneath */
+.fixedPosition
+ {
+    position: fixed;
+ }
+
 /* menu burger */
 
 .ham {
@@ -736,4 +742,39 @@ li:nth-child(4):hover::before {
 
 .ham.active .bottom {
     stroke-dashoffset: -64px;
+}
+
+/*
+ * transition blocks
+ */
+
+ /* three rows of equal size that covers the screen on transition */
+ .transition-blocks-animate {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    left:0;
+    position: fixed;
+    top:100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+ }
+
+ .transition-block {
+    height: 100vh;
+    width: 100%;
+    background: #be2829;
+    display: none;
+}
+
+.transition-block:nth-child(1) {
+    background-color: #011627;
+}
+
+.transition-block:nth-child(2) {
+    background-color: #FF3366;
+}
+
+.transition-block:nth-child(3) {
+    background-color: #2EC4B6;
 }

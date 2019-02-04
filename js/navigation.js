@@ -26,6 +26,7 @@ tl.staggerFrom(
 );
 
 let button = document.querySelector('.menu-btn');
+let barbaWrapper = document.getElementById('barba-wrapper');
 
 tl.reverse();
 
@@ -41,4 +42,5 @@ for (let i = 0; i < length; i++) {
 // if the menu button is clicked, close menu
 button.addEventListener('click', () => {
     tl.reversed(!tl.reversed()); // sets reversed state to inverse of current reversed state
+    barbaWrapper.classList.toggle('fixedPosition'); // stops page being scrolled when navigation is open
 });
