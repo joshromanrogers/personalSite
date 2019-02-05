@@ -1,5 +1,5 @@
 // project slider
-
+let content = document.getElementsByClassName('content')[0];
 let homeSlide = document.getElementsByClassName('slide');
 let slideNavPrev = document.getElementById("prev");
 let slideNavNext = document.getElementById("next");
@@ -84,6 +84,27 @@ slideNavNext.onclick = (e) => {
         sliderCounter++;
     }
 }
+
+// let lastScrollTop = 0;
+// // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+// content.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
+//    var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+//    if (st > lastScrollTop){
+//       // downscroll code
+//       console.log('downscroll')
+//    }
+//    else if(st == lastScrollTop)
+//    {
+//      //do nothing 
+//      //In IE this is an important condition because there seems to be some instances where the last scrollTop is equal to the new one
+//    }
+//    else {
+//       // upscroll code
+//       console.log('upscroll');
+//    }
+//    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+// }, false);
+
 
 // figure out index position in parent
 function indexInParent(node) {

@@ -2,7 +2,7 @@ window.onload = () => {
     Project1.init();
     Collage.init();
     Barba.Pjax.start();
-    
+
     // If coming from external link, play intro animation
     // else, go straight to homepage.
     let content = document.querySelector('.content');
@@ -10,14 +10,11 @@ window.onload = () => {
     if (sessionStorage.viewWebsite) {
         sessionStorage.viewWebsite = Number(sessionStorage.viewWebsite) + 1;
         content.style.zIndex = 2;
-    } 
-    else {        
+    } else {
         sessionStorage.viewWebsite = 1;
     }
 
 }
-
-
 
 var transitionAnimation = Barba.BaseTransition.extend({
     start: function () {
@@ -245,10 +242,10 @@ let Project1 = Barba.BaseView.extend({
 
 let Collage = Barba.BaseView.extend({
     namespace: 'collage',
-    onEnter: function() {
+    onEnter: function () {
         // The new Container is ready and attached to the DOM.
     },
-    onEnterCompleted: function() {
+    onEnterCompleted: function () {
         // The Transition has just finished.
 
         //
@@ -409,11 +406,10 @@ let Collage = Barba.BaseView.extend({
 
         cursorInit();
     },
-    onLeave: function() {
+    onLeave: function () {
         // A new Transition toward a new page has just started.
     },
-    onLeaveCompleted: function() {
+    onLeaveCompleted: function () {
         // The Container has just been removed from the DOM.
     }
-  });
-  
+});
