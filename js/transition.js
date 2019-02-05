@@ -2,7 +2,22 @@ window.onload = () => {
     Project1.init();
     Collage.init();
     Barba.Pjax.start();
+    
+    // If coming from external link, play intro animation
+    // else, go straight to homepage.
+    let content = document.querySelector('.content');
+
+    if (sessionStorage.viewWebsite) {
+        sessionStorage.viewWebsite = Number(sessionStorage.viewWebsite) + 1;
+        content.style.zIndex = 2;
+    } 
+    else {        
+        sessionStorage.viewWebsite = 1;
+    }
+
 }
+
+
 
 var transitionAnimation = Barba.BaseTransition.extend({
     start: function () {
