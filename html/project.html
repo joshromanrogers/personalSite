@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body onload="imageDown()">
     <!-- navigation -->
     <div class="wrapper">
         <div class="menu-btn">
@@ -51,7 +51,7 @@
             </div>
             <div>
                 <div class="projectMain" class="head">
-                    <img src="../imgs/goldenGai2.jpg">
+                    <img id="project-main-img" src="../imgs/photography/misc/misc2.jpg">
                     <h1 class="projectHeader">Welcome</h1>
 
                 </div>
@@ -60,7 +60,7 @@
                     <div class="container" style="height: 2000px">
 
                         <div class="project1">
-                            <img src="imgs/art/art1.jpg">
+                            <img src="../imgs/art/art1.jpg">
                         </div>
                         <p>
                             Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome
@@ -87,10 +87,7 @@
                         </div>
 
                         <div class="project1">
-                            <video class="video-target" width="70%" autoplay loop>
-                                <source src="../videos/mondrian.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+
                             <p>
                                 Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome
                                 Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome
@@ -102,14 +99,14 @@
                 </div>
             </div>
             <!-- scripts -->
+            <script src="../js/project.js"></script>
             <script src="../js/imageMovement.js"></script>
             <script src="../js/skew.js"></script>
             <script src="../scripts/barba.min.js" type="text/javascript"></script>
             <script src="../js/cursor.js"></script>
             <script src="../js/navigation.js"></script>
-            <script src="../js/transition.js"></script>
+            <!--<script src="../js/transition.js"></script>-->
             <script src="../js/main.js"></script>
-
         </div>
     </div>
 

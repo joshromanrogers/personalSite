@@ -453,6 +453,7 @@ h1 {
 
 .projectMain {
     text-align: center;
+
 }
 
 .projectMain img {
@@ -461,11 +462,16 @@ h1 {
 }
 
 .projectHeader {
-    margin-left: 30%;
-    margin-top: 25%;
-
     color: black;
-    font-size: 50px;
+    top: -20px;
+    font-size: 14vmin;
+    opacity: 0;
+    position: relative;
+    right: 33%;
+}
+
+#project-main-img {
+    position: relative;
 }
 
 
