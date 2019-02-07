@@ -748,8 +748,46 @@ li:nth-child(4):hover::before {
     background-color: #2EC4B6;
 }
 
+/*
+ * ThreeJS intro background
+ */
 
-/* media queries */
+Canvas positions .content__inner {
+    grid-area: 1 / 1 / 1 / 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.scene {
+    position: absolute;
+}
+
+.scene--left {
+    width: 100vmin;
+    height: 100vmin;
+    transform: translate3d(-50vmin, 0, 0);
+}
+
+.scene--full {
+    width: 100%;
+    height: 100vh;
+}
+
+.scene--up {
+    height: 150vmin;
+    width: 150vmin;
+    top: -50vh;
+    left: 50%;
+    margin-left: -75vmin;
+}
+
+/* 
+ * media queries 
+ */
 
 @media (max-width: 900px) {
     h1 {
@@ -772,4 +810,23 @@ li:nth-child(4):hover::before {
     li:hover::before {
         width: 0 !important;
     }
+}
+
+@media screen and (max-width: 55em) {
+    .content {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .content--fixed {
+        position: relative;
+        z-index: 1000;
+        display: block;
+        padding: 0.85em;
+    }
+
+    .content:not(.content--fixed) {
+        margin-bottom: 6em;
+    }
+
 }

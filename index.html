@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="styles/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js"></script>
+    <script src="scripts/perlin.js"></script>
 </head>
 
 <body>
@@ -59,6 +61,7 @@
 
             <!-- intro name, title and button -->
             <div class="overlay">
+                <canvas class="scene scene--full" id="scene"></canvas>
                 <h1 class="rev-block">
                     <span>roman rogers</span>
                 </h1>
@@ -136,6 +139,7 @@
             </div>
             <!-- scripts -->
             <script src="js/main.js"></script>
+            <script src="js/introBackground.js"></script>
             <script src="js/button.js"></script>
             <script src="js/cursor.js"></script>
             <script src="js/fadeOut.js"></script>
