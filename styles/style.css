@@ -70,7 +70,6 @@ a {
  */
 
 .myBtn {
-    font-family: Poppins;
     position: absolute;
     transition: 0.8s ease-out;
     opacity: 0;
@@ -123,7 +122,6 @@ button {
  */
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: #fff;
     font-size: 3.5em;
@@ -257,7 +255,6 @@ h1 {
 }
 
 .content h1 {
-    font-family: Poppins;
     font-size: 30px;
     color: #101010;
     font-weight: 700;
@@ -338,7 +335,6 @@ h1 {
     font-weight: 900;
     font-size: 1.7vmin;
     text-transform: uppercase;
-    font-family: Poppins;
     letter-spacing: 10px;
 }
 
@@ -365,7 +361,6 @@ h1 {
 /* link to project */
 .card-link {
     grid-area: card-button;
-    font-family: Poppins;
     font-size: 1.8vmin;
     cursor: pointer;
     opacity: 0.7;
@@ -567,7 +562,6 @@ ul {
 }
 
 li {
-    font-family: Poppins;
     display: inline-block;
     color: white;
 }
@@ -783,6 +777,23 @@ Canvas positions .content__inner {
     top: -50vh;
     left: 50%;
     margin-left: -75vmin;
+}
+
+
+/*
+ * font
+ */
+
+@import url('https://rsms.me/inter/inter.css');
+
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+    html {
+        font-family: 'Inter var', sans-serif;
+    }
 }
 
 /* 

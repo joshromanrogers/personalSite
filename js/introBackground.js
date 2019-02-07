@@ -1,6 +1,6 @@
 let camera, scene, renderer;
 
-let canvas = document.querySelector('canvas');
+let canvas = document.querySelector('.canvas1');
 let width = canvas.offsetWidth;
 let height = canvas.offsetHeight;
 
