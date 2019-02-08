@@ -18,8 +18,8 @@ body {
 
 a {
 	cursor: none;
-	position: relative;
-	/* clickable w/ different z-index's */
+	position: relative; /* clickable w/ different z-index's */
+    color: inherit; /* remove link colour */
 }
 
 /* 
@@ -361,17 +361,19 @@ h2 {
 /* link to project */
 .card-link {
 	grid-area: card-button;
-	font-size: 1.8vmin;
+    font-size: 2vmin;
+    font-weight: bold;
 	cursor: pointer;
 	opacity: 0.7;
 	transition: opacity 0.3s ease;
 	align-self: center;
-	text-transform: uppercase;
-	text-decoration: none;
+    text-decoration: none;
 }
 
-.card-link:after {
-	content: '→';
+.arrow {
+    position: relative; /* so can be animated on card-link hover */
+    margin: 5px;
+    top: 1px;
 }
 
 /* buttons container */
