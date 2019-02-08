@@ -22,27 +22,30 @@ function fadeOut() {
             opacity: 0,
             ease: Power2.easeInOut
         }, "-=1.5")
-        .from(".overlay", 1, {
-            ease: Power2.easeInOut
-        })
-        .to(".overlay", 1, {
+        .to(".overlay", 2, {
             top: "-110%",
             ease: Expo.easeInOut,
             delay: 0.8
-        }, "-=1")
-        .to(".overlay-2", 1, {
+        }, "-=0.5")
+        .to(".overlay-2", 1.2, {
             top: "-110%",
             ease: Expo.easeInOut
-        }, "-=0.25")
-        .from(".content", 1.5, {
-            opacity: 0
+        }, "-=1.2")
+        .from(".card-header1", 1, {
+            autoAlpha: 0,
+            y: 50,
         }, "-=0.5")
-        .to(".content", 1.5, {
-            opacity: 1,
-            y: "-50%"
+        .from(".card-para1", 1, {
+            autoAlpha: 0,
+            y: 50,
         }, "-=0.5")
-        .from(".card-header", 3, {
-            opacity: 0
-        }, "-=1.5");
+        .from(".card-link1", 1, {
+            autoAlpha: 0,
+            x: -50,
+        }, "-=0.5")
+        .from(".card-theme1", 1, {
+            autoAlpha: 0,
+            y: 50,
+        }, "-=0.5")
 
 }

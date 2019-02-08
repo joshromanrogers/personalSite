@@ -83,6 +83,8 @@ slideNavNext.onclick = (e) => {
         goToNextSlide(slideOut, slideIn, slideInAll);
         sliderCounter++;
     }
+    // execute header + para animation
+    homepageAnimation(sliderCounter);
 }
 
 // let lastScrollTop = 0;
@@ -187,4 +189,6 @@ slideNavPrev.onclick = (e) => {
         goToPrevSlide(slideOut, slideIn, slideInAll);
         sliderCounter--;
     }
+    // execute header + para animation
+    homepageAnimation(sliderCounter);
 }

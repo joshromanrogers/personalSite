@@ -9,7 +9,7 @@ const buttonInit = () => {
 const buttonAppear = () => {
 
     TweenMax.to(".myBtn", 1, {
-        delay: 3,
+        delay: 2,
         opacity: 1,
     });
 
