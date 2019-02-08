@@ -674,7 +674,7 @@ li:nth-child(4):hover::before {
 .line {
 	fill: none;
 	transition: stroke-dasharray 300ms, stroke-dashoffset 300ms;
-	stroke: rgb(129, 12, 12);
+	stroke: green;
 	stroke-width: 5.5;
 	stroke-linecap: round;
 }

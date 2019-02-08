@@ -22,5 +22,5 @@ function homepageAnimation(i) {
         .from(`.card-theme${i}`, 1, {
             autoAlpha: 0,
             y: 50,
-        }, "-=0.5");
+        }, "-=0.3");
 }

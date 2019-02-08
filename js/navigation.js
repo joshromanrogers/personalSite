@@ -16,13 +16,12 @@ tl.to('.navigation-overlay', 1.6, {
 // list items appearing up from menu overlay with 0.4s gap.
 tl.staggerFrom(
     '.menu ul li',
-    0.5,
+    1,
     {
-        y: 100,
-        opacity: 0,
-        ease: Expo.easeOut,
+        autoAlpha: 0,
+            y: 50,
     },
-    0.4
+    0.5
 );
 
 let button = document.querySelector('.menu-btn');
@@ -36,6 +35,7 @@ let length = navLinks.length;
 for (let i = 0; i < length; i++) {
     navLinks[i].addEventListener('click', () => {
         tl.reversed(!tl.reversed()); // sets reversed state to inverse of current reversed state
+        barbaWrapper.classList.toggle('fixedPosition'); // stops page being scrolled when navigation is open
     });
 }
 
