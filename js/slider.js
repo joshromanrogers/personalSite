@@ -33,10 +33,10 @@ function goToNextSlide(slideOut, slideIn, slideInAll) {
             .set(slideOut, {
                 className: '-=active'
             })
-            .to(slideOutContent, 0.65, {
-                y: "+=40px",
-                ease: Power3.easeInOut
-            }, 0)
+            // .to(slideOutContent, 0.65, {
+            //     y: "+=40px",
+            //     ease: Power3.easeInOut
+            // }, 0)
             .to(slideOutImg, 0.65, {
                 backgroundPosition: 'bottom',
                 ease: Power3.easeInOut
@@ -45,12 +45,12 @@ function goToNextSlide(slideOut, slideIn, slideInAll) {
                 y: "-=100%",
                 ease: Power3.easeInOut
             }, 0)
-            .fromTo(slideInContent, 0.65, {
-                y: '-=40px'
-            }, {
-                y: 0,
-                ease: Power3.easeInOut
-            }, "-=0.7")
+            // .fromTo(slideInContent, 0.65, {
+            //     y: '-=40px'
+            // }, {
+            //     y: 0,
+            //     ease: Power3.easeInOut
+            // }, "-=0.7")
             .fromTo(slideInImg, 0.65, {
                 backgroundPosition: 'top'
             }, {
@@ -139,10 +139,10 @@ function goToPrevSlide(slideOut, slideIn, slideInAll) {
             .set(slideOut, {
                 className: '-=active'
             })
-            .to(slideOutContent, 0.65, {
-                y: "-=40px",
-                ease: Power3.easeInOut
-            }, 0)
+            // .to(slideOutContent, 0.65, {
+            //     y: "-=40px",
+            //     ease: Power3.easeInOut
+            // }, 0)
             .to(slideOutImg, 0.65, {
                 backgroundPosition: 'top',
                 ease: Power3.easeInOut
@@ -151,12 +151,12 @@ function goToPrevSlide(slideOut, slideIn, slideInAll) {
                 y: "+=100%",
                 ease: Power3.easeInOut
             }, 0)
-            .fromTo(slideInContent, 0.65, {
-                y: '+=40px'
-            }, {
-                y: 0,
-                ease: Power3.easeInOut
-            }, "-=0.7")
+            // .fromTo(slideInContent, 0.65, {
+            //     y: '+=40px'
+            // }, {
+            //     y: 0,
+            //     ease: Power3.easeInOut
+            // }, "-=0.7")
             .fromTo(slideInImg, 0.65, {
                 backgroundPosition: 'bottom'
             }, {

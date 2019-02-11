@@ -17,7 +17,6 @@ body {
 }
 
 a {
-	cursor: none;
 	position: relative; /* clickable w/ different z-index's */
     color: inherit; /* remove link colour */
 }
@@ -26,9 +25,34 @@ a {
  * cursor styling 
  */
 
-.c-cursor {
+
+ .cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+.cursor--small {
+    width: 5px;
+    height: 5px;
+    left: -2.5px;
+    top: -2.5px;
+    border-radius: 50%;
+    z-index: 11000;
+    background-color: #ff0000;
+}
+
+
+.cursor--canvas {
+    width: 100vw;
+    height: 100vh;
+    z-index: 12000;
+}
+
+/* .c-cursor {
 	pointer-events: none;
-	/* Important for links! */
+	Important for links! 
 	border: 2px solid rgba(157, 185, 191, 1);
 	border-radius: 50%;
 	width: 30px;
@@ -63,7 +87,7 @@ a {
 	opacity: 1;
 	transition: transform 0.5s ease-in;
 	transform: scale(0.3, 0.3);
-}
+} */
 
 /* 
  * button styling + animation
@@ -287,14 +311,26 @@ h2 {
 	width: 40%;
 	height: 100%;
 	background-size: cover;
-	background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+
+.card-img:hover {
+    width: 50%;
 }
 
 /* translucent image cover */
 .card-img-layer {
-	background-color: rgba(255, 255, 255, 0.2);
-	width: 100%;
+    background-color: green;
+    opacity: 0.1;
+    width: 100%;
+    transition: 0.5s;
 }
+.card-img-layer:hover {
+    opacity: 0;
+    width: 120%;
+}
+
 
 #img01 {
 	background-image: url('../imgs/art/art1.jpg');
@@ -342,7 +378,7 @@ h2 {
 	grid-area: card-header;
 	position: relative;
 	font-weight: 700;
-	font-size: 14vmin;
+	font-size: 10vmin;
 	line-height: 1;
 	margin: 0;
 	right: 1.5%;
@@ -363,11 +399,11 @@ h2 {
 	grid-area: card-button;
     font-size: 2vmin;
     font-weight: bold;
-	cursor: pointer;
 	opacity: 0.7;
 	transition: opacity 0.3s ease;
 	align-self: center;
-    text-decoration: none;
+	text-decoration: none;
+	width: 18.5%;
 }
 
 .arrow {
@@ -399,7 +435,6 @@ h2 {
 #prev,
 #next {
 	position: relative;
-	cursor: pointer;
 }
 
 #prev:focus,
@@ -656,7 +691,6 @@ li:nth-child(4):hover::before {
 /* menu burger */
 
 .ham {
-	cursor: pointer;
 	-webkit-tap-highlight-color: transparent;
 	transition: transform 1000ms;
 	-moz-user-select: none;
