@@ -26,6 +26,7 @@ tl.staggerFrom(
 
 let button = document.querySelector('.menu-btn');
 let barbaWrapper = document.getElementById('barba-wrapper');
+let buttonSVG = document.querySelector('#svg');
 
 tl.reverse();
 
@@ -35,12 +36,11 @@ let length = navLinks.length;
 for (let i = 0; i < length; i++) {
     navLinks[i].addEventListener('click', () => {
         tl.reversed(!tl.reversed()); // sets reversed state to inverse of current reversed state
-        barbaWrapper.classList.toggle('fixedPosition'); // stops page being scrolled when navigation is open
+        buttonSVG.classList.toggle('active'); // animates burger back if other links are clicked
     });
 }
 
 // if the menu button is clicked, close menu
 button.addEventListener('click', () => {
     tl.reversed(!tl.reversed()); // sets reversed state to inverse of current reversed state
-    barbaWrapper.classList.toggle('fixedPosition'); // stops page being scrolled when navigation is open
 });
