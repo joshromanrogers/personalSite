@@ -5,14 +5,14 @@ window.onload = () => {
 
     // // If coming from external link, play intro animation
     // // else, go straight to homepage.
-    let content = document.querySelector('.content');
+    // let content = document.querySelector('.content');
 
-    if (sessionStorage.viewWebsite) {
-        sessionStorage.viewWebsite = Number(sessionStorage.viewWebsite) + 1;
-        content.style.zIndex = 2;
-    } else {
-        sessionStorage.viewWebsite = 1;
-    }
+    // if (sessionStorage.viewWebsite) {
+    //     sessionStorage.viewWebsite = Number(sessionStorage.viewWebsite) + 1;
+    //     content.style.zIndex = 2;
+    // } else {
+    //     sessionStorage.viewWebsite = 1;
+    // }
 
 }
 

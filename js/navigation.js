@@ -2,6 +2,7 @@ var tl = new TimelineMax({
     paused: true,
 });
 
+
 tl.set('.navigation-overlay', {
     zIndex: 3
 });
@@ -16,10 +17,9 @@ tl.to('.navigation-overlay', 1.6, {
 // list items appearing up from menu overlay with 0.4s gap.
 tl.staggerFrom(
     '.menu ul li',
-    1,
-    {
+    1, {
         autoAlpha: 0,
-            y: 50,
+        y: 50,
     },
     0.5
 );
@@ -27,11 +27,13 @@ tl.staggerFrom(
 let button = document.querySelector('.menu-btn');
 let barbaWrapper = document.getElementById('barba-wrapper');
 let buttonSVG = document.querySelector('#svg');
+let navLinks = document.querySelectorAll('.nav-links');
+console.log(navLinks);
+console.log(navLinks[0]);
 
 tl.reverse();
 
 // if any of the links are clicked, close menu
-let navLinks = document.getElementsByTagName('LI');
 let length = navLinks.length;
 for (let i = 0; i < length; i++) {
     navLinks[i].addEventListener('click', () => {
