@@ -17,8 +17,10 @@ body {
 }
 
 a {
-	position: relative; /* clickable w/ different z-index's */
-    color: inherit; /* remove link colour */
+	position: relative;
+	/* clickable w/ different z-index's */
+	color: inherit;
+	/* remove link colour */
 }
 
 /* 
@@ -26,28 +28,28 @@ a {
  */
 
 
- .cursor {
-    position: fixed;
-    left: 0;
-    top: 0;
-    pointer-events: none;
+.cursor {
+	position: fixed;
+	left: 0;
+	top: 0;
+	pointer-events: none;
 }
 
 .cursor--small {
-    width: 5px;
-    height: 5px;
-    left: -2.5px;
-    top: -2.5px;
-    border-radius: 50%;
-    z-index: 11000;
-    background-color: #ff0000;
+	width: 5px;
+	height: 5px;
+	left: -2.5px;
+	top: -2.5px;
+	border-radius: 50%;
+	z-index: 11000;
+	background-color: #ff0000;
 }
 
 
 .cursor--canvas {
-    width: 100vw;
-    height: 100vh;
-    z-index: 12000;
+	width: 100vw;
+	height: 100vh;
+	z-index: 12000;
 }
 
 /* .c-cursor {
@@ -311,24 +313,25 @@ h2 {
 	width: 40%;
 	height: 100%;
 	background-size: cover;
-    background-repeat: no-repeat;
-    transition: 0.5s;
+	background-repeat: no-repeat;
+	transition: 0.5s;
 }
 
 .card-img:hover {
-    width: 50%;
+	width: 50%;
 }
 
 /* translucent image cover */
 .card-img-layer {
-    background-color: green;
-    opacity: 0.1;
-    width: 100%;
-    transition: 0.5s;
+	background-color: green;
+	opacity: 0.1;
+	width: 100%;
+	transition: 0.5s;
 }
+
 .card-img-layer:hover {
-    opacity: 0;
-    width: 120%;
+	opacity: 0;
+	width: 120%;
 }
 
 
@@ -397,8 +400,8 @@ h2 {
 /* link to project */
 .card-link {
 	grid-area: card-button;
-    font-size: 2vmin;
-    font-weight: bold;
+	font-size: 2vmin;
+	font-weight: bold;
 	opacity: 0.7;
 	transition: opacity 0.3s ease;
 	align-self: center;
@@ -407,9 +410,10 @@ h2 {
 }
 
 .arrow {
-    position: relative; /* so can be animated on card-link hover */
-    margin: 5px;
-    top: 1px;
+	position: relative;
+	/* so can be animated on card-link hover */
+	margin: 5px;
+	top: 1px;
 }
 
 /* buttons container */
@@ -595,6 +599,8 @@ ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	width: 80%;
+	text-align: center;
 }
 
 li {
@@ -684,9 +690,9 @@ li:nth-child(4):hover::before {
 }
 
 /* added to body when menu is open, to stop scrolling underneath */
-.fixedPosition {
+/* .fixedPosition {
 	position: fixed;
-}
+} */
 
 /* menu burger */
 
