@@ -7,12 +7,12 @@ window.onload = () => {
     // // else, go straight to homepage.
     // let content = document.querySelector('.content');
 
-    // if (sessionStorage.viewWebsite) {
-    //     sessionStorage.viewWebsite = Number(sessionStorage.viewWebsite) + 1;
-    //     content.style.zIndex = 2;
-    // } else {
-    //     sessionStorage.viewWebsite = 1;
-    // }
+    if (sessionStorage.viewWebsite) {
+        sessionStorage.viewWebsite = Number(sessionStorage.viewWebsite) + 1;
+        content.style.zIndex = 2;
+    } else {
+        sessionStorage.viewWebsite = 1;
+    }
 
 }
 

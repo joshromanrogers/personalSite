@@ -316,6 +316,7 @@ h2 {
 	background-size: cover;
 	background-repeat: no-repeat;
 	transition: 0.5s;
+	z-index: 1;
 }
 
 .card-img:hover {
@@ -398,6 +399,15 @@ h2 {
 	align-self: center;
 }
 
+.counter {
+	position: absolute;
+	left: -20%;
+	top: -14%;
+	font-size: 30em;
+	opacity: 0;
+	color: darkgreen;
+}
+
 /* link to project */
 .card-link {
 	grid-area: card-button;
@@ -408,7 +418,7 @@ h2 {
 	align-self: center;
 	text-decoration: none;
 	width: 18.5%;
-	color: green;
+	color: darkgreen;
 }
 
 .arrow {
@@ -423,9 +433,9 @@ h2 {
 	position: absolute;
 	width: 4vmin;
 	height: 8vmin;
-	right: 5%;
+	right: 4%;
 	bottom: 0;
-	top: 80%;
+	top: 85%;
 	margin: 5 0;
 }
 
@@ -438,9 +448,18 @@ h2 {
 	color: black;
 }
 
+#prev {
+	opacity: 0.2;
+
+}
+
 #prev,
 #next {
 	position: relative;
+}
+
+button:disabled:hover {
+	cursor: not-allowed;
 }
 
 #prev:focus,
@@ -448,21 +467,7 @@ h2 {
 	outline: none;
 }
 
-#prev:hover:after,
-#next:hover:after {
-	opacity: 1;
-}
-
-#prev:after,
-#next:after {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	margin: auto;
+.pn-btn-unav {
 	opacity: 0.6;
 	transition: opacity 0.3s ease;
 }

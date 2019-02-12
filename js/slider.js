@@ -4,6 +4,8 @@ let homeSlide = document.getElementsByClassName('slide');
 let slideNavPrev = document.getElementById("prev");
 let slideNavNext = document.getElementById("next");
 let sliderCounter = 0;
+let prevBtn = document.querySelector('#prev');
+let nextBtn = document.querySelector('#next');
 
 // next slide using GSAP timeline
 function goToNextSlide(slideOut, slideIn, slideInAll) {
@@ -13,7 +15,6 @@ function goToNextSlide(slideOut, slideIn, slideInAll) {
     let slideOutImg = slideOut.getElementsByClassName('card-img')[0];
     let slideInImg = slideIn.getElementsByClassName('card-img')[0];
 
-    let index = indexInParent(slideIn);
     let size = homeSlide.length;
 
     //
@@ -63,9 +64,20 @@ function goToNextSlide(slideOut, slideIn, slideInAll) {
         autoAlpha: 1
     });
 
-    if (index === size - 1) {
+    // if we reach the final project overview, reduce 'next arrow' opacity to 0.2
+    if (sliderCounter === (size - 1)) {
+        slideNavNext.disabled = true;
         TweenMax.to(slideNavNext, 0.3, {
             autoAlpha: 0.2,
+            ease: Linear.easeNone
+        });
+    }
+
+    // increase 'previous arrow' opacity to 1 when we aren't on first project overview
+    if (sliderCounter != 0) {
+        slideNavPrev.disabled = false;
+        TweenMax.to(slideNavPrev, 0.3, {
+            autoAlpha: 1,
             ease: Linear.easeNone
         });
     }
@@ -74,14 +86,15 @@ function goToNextSlide(slideOut, slideIn, slideInAll) {
 // on clicking down button, go to next slide
 slideNavNext.onclick = (e) => {
     e.preventDefault();
-    console.log(sliderCounter);
     if (sliderCounter < 2) {
         let slideOut = document.getElementsByClassName('slide active')[0];
         let slideIn = document.getElementsByClassName('slide active')[0].nextElementSibling;
         let slideInAll = document.getElementsByClassName('slide');
 
-        goToNextSlide(slideOut, slideIn, slideInAll);
         sliderCounter++;
+        goToNextSlide(slideOut, slideIn, slideInAll);
+        console.log(sliderCounter);
+
     }
     // execute header + para animation
     homepageAnimation(sliderCounter);
@@ -108,17 +121,6 @@ slideNavNext.onclick = (e) => {
 // }, false);
 
 
-// figure out index position in parent
-function indexInParent(node) {
-    var children = node.parentNode.childNodes;
-    var num = 0;
-    for (var i = 0; i < children.length; i++) {
-        if (children[i] == node) return num;
-        if (children[i].nodeType == 1) num++;
-    }
-    return -1;
-}
-
 // go to previous slide using GSAP timeline
 function goToPrevSlide(slideOut, slideIn, slideInAll) {
     var tl = new TimelineLite();
@@ -126,8 +128,6 @@ function goToPrevSlide(slideOut, slideIn, slideInAll) {
     let slideInContent = slideIn.getElementsByClassName('card-content')[0];
     let slideOutImg = slideOut.getElementsByClassName('card-img')[0];
     let slideInImg = slideIn.getElementsByClassName('card-img')[0];
-
-    let index = indexInParent(slideIn);
     let size = homeSlide.length;
 
     if (slideIn.length !== 0) {
@@ -169,9 +169,20 @@ function goToPrevSlide(slideOut, slideIn, slideInAll) {
         autoAlpha: 1
     });
 
-    if (index === 0) {
+    // decrease 'previous arrow' opacity to 0.2 when we're on first project preview
+    if (sliderCounter === 0) {
+        slideNavPrev.disabled = true;
         TweenMax.to(slideNavPrev, 0.3, {
             autoAlpha: 0.2,
+            ease: Linear.easeNone
+        });
+    }
+
+    // increase 'next arrow' opacity to 1 when we're not on last project preview
+    if (sliderCounter != size) {
+        slideNavNext.disabled = false;
+        TweenMax.to(slideNavNext, 0.3, {
+            autoAlpha: 1,
             ease: Linear.easeNone
         });
     }
@@ -186,9 +197,11 @@ slideNavPrev.onclick = (e) => {
         let slideIn = document.getElementsByClassName('slide active')[0].previousElementSibling;
         let slideInAll = document.getElementsByClassName('slide');
 
-        goToPrevSlide(slideOut, slideIn, slideInAll);
         sliderCounter--;
+        goToPrevSlide(slideOut, slideIn, slideInAll);
+        console.log(sliderCounter);
     }
+
     // execute header + para animation
     homepageAnimation(sliderCounter);
 }
