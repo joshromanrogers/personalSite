@@ -5,7 +5,7 @@ window.onload = () => {
 
     // // If coming from external link, play intro animation
     // // else, go straight to homepage.
-    // let content = document.querySelector('.content');
+    let content = document.querySelector('.content');
 
     if (sessionStorage.viewWebsite) {
         sessionStorage.viewWebsite = Number(sessionStorage.viewWebsite) + 1;
@@ -62,11 +62,11 @@ var transitionAnimation = Barba.BaseTransition.extend({
                 zIndex: 0
             })
 
-        // Wait 1.5s for the promise to resolve = wait 1.5s for the next page to load.
+        // Wait .5s for the promise to resolve = wait .5s for the next page to load.
         return new Promise(function (resolve, reject) {
             window.setTimeout(function () {
                 resolve();
-            }, 1500);
+            }, 500);
         });
 
     },

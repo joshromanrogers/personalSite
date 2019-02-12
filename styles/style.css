@@ -500,7 +500,7 @@ button:disabled:hover {
 }
 
 .projectMain img {
-	width: 50%;
+	width: 55%;
 	margin: 10%;
 }
 
@@ -768,11 +768,7 @@ li:nth-child(4):hover::before {
  */
 
 .transition-blocks-animate {
-	display: grid;
-	grid-template-rows: repeat(3, 1fr);
-	top: 0;
 	position: fixed;
-	left: 0;
 	width: 100%;
 	height: 100%;
 	z-index: 0;
@@ -786,15 +782,11 @@ li:nth-child(4):hover::before {
 }
 
 .transition-block:nth-child(1) {
-	background-color: #011627;
+	background-color: darkgreen;
 }
 
 .transition-block:nth-child(2) {
-	background-color: #ff3366;
-}
-
-.transition-block:nth-child(3) {
-	background-color: #2ec4b6;
+	background-color: black;
 }
 
 /*
