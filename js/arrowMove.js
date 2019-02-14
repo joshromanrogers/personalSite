@@ -12,7 +12,7 @@ cardLink.forEach(x => {
 
 function arrowMoveIn() {
     TweenLite.to(arrow, 0.3, {
-        left: "10px"
+        left: "20px"
     });
 }
 

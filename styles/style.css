@@ -368,6 +368,7 @@ h2 {
 }
 
 .card-theme {
+	color: darkgreen;
 	grid-area: card-theme;
 	font-weight: 900;
 	font-size: 1.7vmin;
@@ -387,6 +388,12 @@ h2 {
 	line-height: 1;
 	margin: 0;
 	right: 1.5%;
+}
+
+.card-header:hover {
+	color: transparent;
+	-webkit-text-stroke: 2px rgba(8, 8, 8);
+
 }
 
 .card-para {
@@ -484,38 +491,106 @@ button:disabled:hover {
  * project css
  */
 
-.container {
-	transition: transform 0.25s;
-	will-change: transform;
+.project-container {
+	position: relative;
+}
+
+.project-main-image-container {
+	position: relative;
+	overflow: hidden;
 	width: 100%;
 }
 
-.container img {
-	margin: 20%;
+.project-main-image {
+	width: 120%;
+	margin-left: -10%;
+	margin-top: -10%;
+}
+
+.main-image-text {
+	top: 50%;
+	left: 20%;
+	position: absolute;
+	width: 50%;
+}
+
+.main-image-text>p {
+	font-size: 3vmin;
+	color: white;
+}
+
+.main-image-text>h2 {
+	font-size: 15vmin;
+	color: transparent;
+	-webkit-text-stroke: 2px white;
+}
+
+.main-image-text>h2:hover {
+	color: white;
+	-webkit-text-stroke: 0px white;
+}
+
+.project-title {
+	width: 80%;
+	height: 200px;
+	margin: 0 auto;
+}
+
+.project-title-text {
+	position: absolute;
+	margin-top: 10%;
+}
+
+.project-description {
+	width: 80%;
+	height: 100px;
+	margin: 0 auto;
+}
+
+.project-description-inner {
+	display: inline-block;
+	width: 32%;
+}
+
+.project-description-inner>h4 {
+	color: darkgreen;
+}
+
+.project-image {
+	width: 66.6%;
+	margin: 0 auto;
+}
+
+.project-overview {
 	width: 60%;
+	margin: 0 auto;
+	margin-top: 10%;
+	margin-bottom: 10%;
 }
 
-.projectMain {
-	text-align: center;
+.scrolling-wrapper {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+	/* smooth mobile scroll */
+	width: 90%;
+	float: right;
+	/* right side of page */
 }
 
-.projectMain img {
-	width: 55%;
-	margin: 10%;
+/* don't display horizontal scrollbar */
+.scrolling-wrapper::-webkit-scrollbar {
+	display: none;
 }
 
-.projectHeader {
-	color: black;
-	top: -20px;
-	font-size: 14vmin;
-	opacity: 0;
-	position: relative;
-	right: 33%;
+.scrolling-card {
+	display: inline-block;
+	margin-left: -10%;
+	overflow: hidden;
+
 }
 
-#project-main-img {
-	position: relative;
-}
 
 /*
  * collage
