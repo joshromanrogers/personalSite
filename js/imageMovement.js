@@ -14,4 +14,6 @@ document.addEventListener("mousemove", (e) => {
 
     target.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg)`;
 
+    // transition: transform .75s cubic-bezier(.15,.65,.2,1); GET THAT SMOOOOOOOOTHNESS!!
+
 });

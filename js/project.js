@@ -46,3 +46,9 @@ function imageDown() {
             y: 50,
         }, "-=0.3");
 }
+
+function arrowMoveOut() {
+    TweenLite.to(arrow, 0.3, {
+        left: "0px"
+    });
+}

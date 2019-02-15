@@ -323,17 +323,28 @@ h2 {
 	width: 50%;
 }
 
+/* .tinted-image {
+	background: 
+	   top, transparent red, faked with gradient  
+	  linear-gradient(
+		rgba(255, 0, 0, 0.45), 
+		rgba(255, 0, 0, 0.45)
+	  ),
+	  
+	  url('../imgs/art/art1.jpg');
+  } */
+
 /* translucent image cover */
-.card-img-layer {
+.img-layer {
 	background-color: green;
 	opacity: 0.1;
 	width: 100%;
-	transition: 0.5s;
 }
 
 .card-img-layer:hover {
 	opacity: 0;
 	width: 120%;
+	transition: 0.5s;
 }
 
 
