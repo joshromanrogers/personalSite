@@ -10,6 +10,11 @@ cardLink.forEach(x => {
     x.addEventListener('mouseleave', arrowMoveOut);
 });
 
+// event listeners for 'next project' links
+nextProjectText.addEventListener('mouseover', arrowMoveIn);
+nextProjectText.addEventListener('mouseleave', arrowMoveOut);
+
+
 function arrowMoveIn() {
     TweenLite.to(arrow, 0.3, {
         left: "20px"
