@@ -4,7 +4,8 @@ var tl = new TimelineMax({
 
 
 tl.set('.navigation-overlay', {
-    zIndex: 3
+    zIndex: 3,
+    autoAlpha: 1,
 });
 
 // overlay moves down to 0px
