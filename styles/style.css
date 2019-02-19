@@ -152,10 +152,6 @@ h1 {
 	font-style: italic;
 }
 
-h2 {
-	font-style: bold;
-}
-
 .rev-block {
 	position: absolute;
 	grid-area: name;
@@ -632,46 +628,55 @@ button:disabled:hover {
 .contact-container {
 	width: 100%;
 	height: 100vh;
-	background-color: red;
+	background-color: white;
 	position: relative;
+	overflow-x: hidden; /* hides horizontal scroll from view */
 }
 
 .contact-central {
-	width: 50%;
-	height: 70%;
-	top: 25%;
-	left: 25%;
+	width: 40%;
+	height: 100%;
+
 	position: relative;
 	background-color: green;
 	z-index: 1;
+	display: flex;
+  align-items: flex-end;
+	justify-content: space-between;
+	background-color: darkkhaki;
+}
+
+.socials {
+	margin: 10%;	
+	font-weight: bold;
 }
 
 .strip {
+	padding: 1%;
 	position: absolute;
 	display: inline-block;
-	width: 110%;
 	height: 10%;
 	top: 55%;
-	border: 5px solid yellow;
-	border-left-color: none;
-	border-bottom-color: yellow;
+	border: 5px solid black;
 	font-weight: 700;
 	letter-spacing: -0.5rem;
 	text-transform: uppercase;
 	white-space: nowrap;
-	font-size: 5rem;
-	line-height: 4rem;
+	font-size: 5.5rem;
+	line-height: 4.5rem;
 	left: -3%;
+	letter-spacing: 0.5px;
 }
 
 .strip-large {
 	height: 15%;
 	top: 30%;
-	border-top-color: yellow;
-	border-bottom-color: yellow;
 	font-size: 8rem;
-	line-height: 7rem;
+	line-height: 6.5rem;
 	z-index: 2;
+	left: -1000px;
+	color: transparent;
+	-webkit-text-stroke: 5px black;
 }
 
 /*
@@ -887,7 +892,7 @@ li:nth-child(4):hover::before {
 .line {
 	fill: none;
 	transition: stroke-dasharray 300ms, stroke-dashoffset 300ms;
-	stroke: green;
+	stroke: #DD6031;
 	stroke-width: 5.5;
 	stroke-linecap: round;
 }
