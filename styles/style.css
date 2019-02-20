@@ -723,6 +723,10 @@ button:disabled:hover {
 	right: 0;
 	z-index: 10;
 	margin: 2%;
+	color: green;
+	text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
 }
 
 .navigation-button {

@@ -29,26 +29,30 @@
 
 let mainImg = document.querySelector('.project-main-image');
 
-function imageDown() {
-    let projectTl = new TimelineLite();
+// function imageDown() {
+//     let projectTl = new TimelineLite();
 
-    projectTl
-        .to(mainImg, 2, {
-            scaleX: 0.9,
-            scaleY: 0.9
-        })
-        .from(`.card-header-project`, 1, {
-            autoAlpha: 0,
-            y: 50,
-        }, "-=1")
-        .from(`.card-theme-project`, 1, {
-            autoAlpha: 0,
-            y: 50,
-        }, "-=0.3");
-}
+//     projectTl
+//         .to(mainImg, 2, {
+//             scaleX: 0.9,
+//             scaleY: 0.9
+//         })
+//         .from(`.card-header-project`, 1, {
+//             autoAlpha: 0,
+//             y: 50,
+//         }, "-=1")
+//         .from(`.card-theme-project`, 1, {
+//             autoAlpha: 0,
+//             y: 50,
+//         }, "-=0.3");
+// }
 
 function arrowMoveOut() {
     TweenLite.to(arrow, 0.3, {
         left: "0px"
     });
 }
+
+let projectImage = document.querySelectorAll('.project-image');
+
+console.log(projectImage[0]);

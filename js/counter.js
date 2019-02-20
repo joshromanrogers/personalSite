@@ -1,5 +1,5 @@
 // counter function
-// (min number, max number, time interval between executing function)
+// (min number, max number, time interval between executing function, query selector)
 
 let counter = (min, max, speed, query) => {
 
