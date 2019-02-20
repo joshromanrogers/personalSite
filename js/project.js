@@ -69,3 +69,18 @@ tlImage.from(".image-cover", 1, {
     .from(".project-image", 0.1, {
         opacity: 0
     }, "reveal");
+
+
+let tlScrolling = new TimelineMax();
+
+tlScrolling.from(".scroll-cover", 1, {
+    scaleX: 0,
+    transformOrigin: "left"
+})
+.to(".scroll-cover", 1, {
+    scaleX: 0,
+    transformOrigin: "right"
+}, "reveal")
+.from(".scrolling-card", 0.1, {
+    opacity: 0
+}, "reveal");
