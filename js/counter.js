@@ -7,7 +7,7 @@ let counter = (min, max, speed, query) => {
     let inc = -1;
     let stripName = document.querySelector(`.${query}`);
 
-    
+
     // count every second
     setInterval(() => {
         if (counter == max) inc = -1; // once we reach max, start removing from counter
@@ -15,7 +15,7 @@ let counter = (min, max, speed, query) => {
         counter += inc; // increment
         stripName.style.transform = `translate3d(${counter}px, 0px, 0px)`;
     }, speed);
-    
+
 }
 
 counter(-1000, 0, 10, 'strip-name');

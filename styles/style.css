@@ -369,20 +369,8 @@ h1 {
 		'card-header'
 		'card-para'
 		'card-button';
-	grid-template-rows: 0.5fr 0.5fr 1fr 0.5fr;
+	grid-template-rows: 0.4fr 0.5fr 1fr 0.5fr;
 	/* for animation */
-}
-
-.card-theme {
-	color: darkgreen;
-	grid-area: card-theme;
-	font-weight: 900;
-	font-size: 1.7vmin;
-	text-transform: uppercase;
-	letter-spacing: 10px;
-	margin: 0;
-	align-self: center;
-	text-align: end;
 }
 
 .card-header {
@@ -440,15 +428,32 @@ h1 {
 	top: 1px;
 }
 
+.return {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+}
+
+/* project counter */
+.project-counter {
+	position: absolute;
+	width: 4vmin;
+	height: 8vmin;
+	right: 11%;
+	bottom: 0;
+	top: 25%;
+	color: black;
+	z-index: 2;
+}
+
 /* buttons container */
 .prevnext {
 	position: absolute;
 	width: 4vmin;
 	height: 8vmin;
-	right: 4%;
+	right: 10%;
 	bottom: 0;
-	top: 85%;
-	margin: 5 0;
+	top: 80%;
 }
 
 .pn-btn {
@@ -549,11 +554,13 @@ button:disabled:hover {
 .project-description {
 	width: 80%;
 	height: 100px;
-	margin: 0 auto;
+	margin: 15% auto;
+	text-align: center;
 }
 
 .project-description-inner {
 	display: inline-block;
+	text-align: center;
 	width: 32%;
 }
 
@@ -561,16 +568,35 @@ button:disabled:hover {
 	color: darkgreen;
 }
 
+.image-wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.image-cover {
+	width: 85%;
+	height: 100%;
+	background: black;
+	position: absolute;
+	top: 0;
+	left: 0;
+	align-self: center;
+}
+
 .project-image {
-	width: 66.6%;
-	margin: 0 auto;
+	width: 70%;
+}
+
+.project-img-container {
+	width: 100%;
+	margin: 15% auto;
 }
 
 .project-overview {
 	width: 60%;
-	margin: 0 auto;
-	margin-top: 10%;
-	margin-bottom: 10%;
+	margin: 15% auto;
 }
 
 .scrolling-wrapper {
@@ -579,9 +605,10 @@ button:disabled:hover {
 	white-space: nowrap;
 	-webkit-overflow-scrolling: touch;
 	/* smooth mobile scroll */
-	width: 90%;
+	width: 87%;
 	float: right;
 	/* right side of page */
+	margin: 15% auto;
 }
 
 /* don't display horizontal scrollbar */
@@ -641,13 +668,13 @@ button:disabled:hover {
 	background-color: green;
 	z-index: 1;
 	display: flex;
-  align-items: flex-end;
+	align-items: flex-end;
 	justify-content: space-between;
 	background-color: darkkhaki;
 }
 
 .socials {
-	margin: 10%;	
+	margin: 10%;
 	font-weight: bold;
 }
 
@@ -720,13 +747,13 @@ button:disabled:hover {
 
 .menu-btn {
 	position: fixed;
-	right: 0;
+	right: 5%;
+	top: 6%;
 	z-index: 10;
-	margin: 2%;
 	color: green;
 	text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 500;
+	letter-spacing: 3px;
+	font-weight: 500;
 }
 
 .navigation-button {
@@ -896,7 +923,7 @@ li:nth-child(4):hover::before {
 .line {
 	fill: none;
 	transition: stroke-dasharray 300ms, stroke-dashoffset 300ms;
-	stroke: #DD6031;
+	stroke: #dd6031;
 	stroke-width: 5.5;
 	stroke-linecap: round;
 }

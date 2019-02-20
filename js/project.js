@@ -55,4 +55,17 @@ function arrowMoveOut() {
 
 let projectImage = document.querySelectorAll('.project-image');
 
-console.log(projectImage[0]);
+
+let tlImage = new TimelineMax();
+
+tlImage.from(".image-cover", 1, {
+        scaleX: 0,
+        transformOrigin: "left"
+    })
+    .to(".image-cover", 1, {
+        scaleX: 0,
+        transformOrigin: "right"
+    }, "reveal")
+    .from(".project-image", 0.1, {
+        opacity: 0
+    }, "reveal");
