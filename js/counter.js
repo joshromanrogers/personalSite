@@ -13,7 +13,6 @@ let counter = (min, max, speed, query) => {
         if (counter == max) inc = -1; // once we reach max, start removing from counter
         if (counter == min) inc = 1; // once we reach min, start adding to counter
         counter += inc; // increment
-        console.log(counter);
         stripName.style.transform = `translate3d(${counter}px, 0px, 0px)`;
     }, speed);
     

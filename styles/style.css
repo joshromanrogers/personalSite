@@ -755,7 +755,7 @@ i {
 .col-lg.navigation-overlay {
 	background: #000;
 	position: fixed;
-	top: -1000%;
+	top: -200%;
 	width: 100%;
 	overflow: hidden;
 	opacity: 0;
