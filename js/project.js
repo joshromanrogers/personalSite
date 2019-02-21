@@ -1,6 +1,6 @@
-// let mainImg = document.querySelector('#project-main-img');
-// let projectHeader = document.querySelector('.projectHeader');
-// console.log(mainImg);
+let mainImg = document.querySelector('#project-main-img');
+let projectHeader = document.querySelector('.projectHeader');
+console.log(mainImg);
 
 
 // function imageDown() {
@@ -27,7 +27,7 @@
 //     console.log('executed');
 // }
 
-let mainImg = document.querySelector('.project-main-image');
+// let mainImg = document.querySelector('.project-main-image');
 
 // function imageDown() {
 //     let projectTl = new TimelineLite();
@@ -55,10 +55,28 @@ function arrowMoveOut() {
 
 let projectImage = document.querySelectorAll('.project-image');
 
+// // project description animation
+// let tlDescription = new TimelineMax();
+
+// tlDescription.from(".image-cover", 1, {
+//     scaleX: 0,
+//     transformOrigin: "left",
+// })
+// .to(".image-cover", 1, {
+//     scaleX: 0,
+//     transformOrigin: "right"
+// }, "reveal")
+// .from(".project-image", 0.1, {
+//     opacity: 0
+// }, "reveal");
+
+
+
+
 // image animation - don't play on load
 let tlImage = new TimelineMax();
 
-tlImage.from(".image-cover", 1, {
+tlImage.from(".image-cover", 0.5, {
         scaleX: 0,
         transformOrigin: "left",
     })
@@ -74,7 +92,7 @@ tlImage.from(".image-cover", 1, {
 // scrolling carousel animation
 let tlScrolling = new TimelineMax();
 
-tlScrolling.from(".scroll-cover", 1, {
+tlScrolling.from(".scroll-cover", 0.5, {
         scaleX: 0,
         transformOrigin: "left"
     })
@@ -105,3 +123,5 @@ let scrollingSM = new ScrollMagic.Scene({
     })
     .setTween(tlScrolling)
     .addTo(controller);
+
+
