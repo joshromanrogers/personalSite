@@ -38,8 +38,8 @@ const initCanvas = () => {
   console.log('initCanvas');
   const canvas = document.querySelector(".cursor--canvas");
   const shapeBounds = {
-    width: 90,
-    height: 90
+    width: 45,
+    height: 45
   };
   paper.setup(canvas);
   const strokeColor = "green";
