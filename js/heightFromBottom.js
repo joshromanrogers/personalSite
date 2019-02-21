@@ -15,7 +15,6 @@ zoomOutOnScroll = () => {
     let scrollHeight = document.documentElement.scrollHeight;
     let scrollPosition = window.innerHeight + window.pageYOffset;
     let distanceFromBottom = scrollHeight - scrollPosition;
-    console.log(distanceFromBottom);
     if ((distanceFromBottom) < 400) {
 
         nextProjectImage.style.transform = `translate3d(0px, ${-distanceFromBottom}px, 0px)`;
